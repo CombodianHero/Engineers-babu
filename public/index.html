@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Engineers Babu Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.compiled.js"></script>
+</head>
+
+<body>
+
+<div id="player-container">
+
+  <div class="logo">ENGINEERS BABU</div>
+
+  <video id="video" playsinline></video>
+
+  <!-- overlays -->
+  <div id="brightness-layer"></div>
+  <div id="seek-left" class="seek-overlay">⏪ 10s</div>
+  <div id="seek-right" class="seek-overlay">⏩ 10s</div>
+  <div id="gesture-toast"></div>
+
+  <!-- buttons -->
+  <button id="lock-btn" class="overlay-btn">🔒</button>
+  <button id="shot-btn" class="overlay-btn">📸</button>
+
+  <!-- controls -->
+  <div id="controls">
+    <div id="progress-bar"><div id="progress-fill"></div></div>
+
+    <div class="bottom-controls">
+      <button id="play-btn">▶</button>
+      <span id="time">00:00 / 00:00</span>
+
+      <div class="right-controls">
+        <button id="speed-btn">1x</button>
+        <button id="quality-btn">AUTO</button>
+        <button id="fullscreen-btn">⛶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- menus -->
+  <div id="speed-menu" class="menu"></div>
+  <div id="quality-menu" class="menu"></div>
+
+  <div id="loading">Loading…</div>
+  <div id="error"><p id="error-msg"></p></div>
+
+</div>
+
+<script src="player.js"></script>
+</body>
+</html>
